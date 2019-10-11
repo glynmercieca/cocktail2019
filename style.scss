@@ -1,0 +1,118 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #1f1f1f;
+}
+
+.drink-wrapper {
+    background: #f9f9f9;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+
+    .image-wrapper {
+        
+
+        @media (min-width: 992px) {
+            width: 25%;
+         }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            
+    margin-bottom: 2rem;
+
+    @media (min-width: 992px) {
+        margin-bottom: 0;
+     }
+        }
+    }
+
+    .info-wrapper {
+       
+        @media (min-width: 992px) {
+            width: 75%;
+         }
+
+        small {
+            display: block;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.type {
+    display: inline-flex;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 100%;
+
+    &.gin {
+        background-color: #90C484;
+    }
+    &.whiskey {
+        background-color: #FED477;
+    }
+    &.rum {
+        background-color: #E26367;
+    }
+    &.vodka {
+        background-color: #6FA9D7;
+    }
+}
+
+.legend {
+top: 2rem;    
+
+    ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        @media (min-width: 992px) {
+            display: flex;
+         }
+
+        &.off {
+            opacity: 0.3;
+        }
+
+        .type {
+            margin-right: 0.3rem;
+        }
+    }
+}
+}
+
+.side {
+    top: 2rem;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 1rem;
+
+            a {
+                display: block;
+                background: #f9f9f9;
+                color: #1f1f1f;
+                padding: 0.5rem;
+                border-radius: 5px;
+                text-decoration: none;;
+            }
+        }
+    }
+}
