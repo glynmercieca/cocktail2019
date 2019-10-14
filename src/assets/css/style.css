@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #1f1f1f;
@@ -42,7 +43,7 @@ html, body {
   margin-bottom: 1rem;
 }
 
-.type {
+.drink-wrapper .info-wrapper .type {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -51,20 +52,20 @@ html, body {
   border-radius: 100%;
 }
 
-.type.gin {
-  background-color: #90C484;
+.drink-wrapper .info-wrapper .type.gin {
+  background-color: #90c484;
 }
 
-.type.whiskey {
-  background-color: #FED477;
+.drink-wrapper .info-wrapper .type.whiskey {
+  background-color: #fed477;
 }
 
-.type.rum {
-  background-color: #E26367;
+.drink-wrapper .info-wrapper .type.rum {
+  background-color: #e26367;
 }
 
-.type.vodka {
-  background-color: #6FA9D7;
+.drink-wrapper .info-wrapper .type.vodka {
+  background-color: #6fa9d7;
 }
 
 .legend {
@@ -84,8 +85,6 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1rem;
-  cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -96,12 +95,60 @@ html, body {
   }
 }
 
-.legend ul li.off {
-  opacity: 0.3;
+.legend ul li input[type='checkbox'] {
+  display: none;
 }
 
-.legend ul li .type {
+.legend ul li input[type='checkbox']:checked + label.gin:before {
+  background-color: #90c484;
+}
+
+.legend ul li input[type='checkbox']:checked + label.whiskey:before {
+  background-color: #fed477;
+}
+
+.legend ul li input[type='checkbox']:checked + label.rum:before {
+  background-color: #e26367;
+}
+
+.legend ul li input[type='checkbox']:checked + label.vodka:before {
+  background-color: #6fa9d7;
+}
+
+.legend ul li label {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.legend ul li label:before {
+  content: '';
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 100%;
   margin-right: 0.3rem;
+  border: 2px solid;
+}
+
+.legend ul li label.gin:before {
+  border-color: #90c484;
+}
+
+.legend ul li label.whiskey:before {
+  border-color: #fed477;
+}
+
+.legend ul li label.rum:before {
+  border-color: #e26367;
+}
+
+.legend ul li label.vodka:before {
+  border-color: #6fa9d7;
 }
 
 .side {

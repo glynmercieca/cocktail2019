@@ -27,18 +27,24 @@
     <div class="row">
       <div class="col-12 col-lg-2">
         <div class="legend position-sticky">
-          <ul class="d-flex flex-row flex-lg-column justify-content-between">
-            <li data-type="gin">
-              <span class="type gin"></span> Gin
+          <h5>Filter by type</h5>
+
+          <ul class="d-flex flex-row flex-lg-column justify-content-between mt-3">
+            <li>
+              <input type="checkbox" value="gin" id="gi" checked>
+              <label for="gi" class="gin">Gin</label>
             </li>
-            <li data-type="vodka">
-              <span class="type vodka"></span> Vodka
+            <li>
+              <input type="checkbox" value="vodka" id="vo" checked>
+              <label for="vo" class="vodka">Vodka</label>
             </li>
-            <li data-type="rum">
-              <span class="type rum"></span> Rum
+            <li>
+              <input type="checkbox" value="rum" id="ru" checked>
+              <label for="ru" class="rum">Rum</label>
             </li>
-            <li data-type="whiskey">
-              <span class="type whiskey"></span> Whiskey
+            <li>
+              <input type="checkbox" value="whiskey" id="wh" checked>
+              <label for="wh" class="whiskey">Whiskey</label>
             </li>
           </ul>
         </div>
@@ -52,7 +58,7 @@
             <div class="info-wrapper text-center">
               <h2>Apple, elderflower & Gin <span class="type gin"></span></h2>
               <small>It’s like the Gods are pissing in your mouth!</small>
-              <p>Contains: Gin, Elderflower cordial, Apple juice, Apple slices and Ice</p>
+              <p>Gin, Elderflower cordial, Apple juice, Apple slices and Ice</p>
             </div>
           </div>
         </div>
@@ -67,7 +73,7 @@
               <small>Sipping a tiki drink on a Hawaiian sandy beach looking at nothing but the Blue
                 pacific
                 ocean.</small>
-              <p>Contains: Rum (light), Blue curacao, Cream of coconut, Pineapple juice and a Pineapple
+              <p>Rum (light), Blue curacao, Cream of coconut, Pineapple juice and a Pineapple
                 wedge
                 or a Maraschino cherry</p>
             </div>
@@ -82,7 +88,7 @@
             <div class="info-wrapper text-center">
               <h2>Blue Mai Tai (variant) <span class="type rum"></span></h2>
               <small>Might I have a Mai Tai?</small>
-              <p>Contains: Rum (light), Blue curacao, Amaretto, Lime juice and Simple syrup</p>
+              <p>Rum (light), Blue curacao, Amaretto, Lime juice and Simple syrup</p>
             </div>
           </div>
         </div>
@@ -95,7 +101,7 @@
             <div class="info-wrapper text-center">
               <h2>Cuba Libre <span class="type rum"></span></h2>
               <small>Viva la revolución!</small>
-              <p>Contains: Rum (light), Lime juice and Cola</p>
+              <p>Rum (light), Lime juice and Cola</p>
             </div>
           </div>
         </div>
@@ -109,7 +115,7 @@
               <h2>Electric Blue <span class="type gin"></span>&nbsp;<span class="type vodka"></span>&nbsp;<span
                   class="type rum"></span></h2>
               <small>For when you need to tingle your senses. Warning, high voltage.!</small>
-              <p>Contains: Gin, Vodka, Rum (Bacardi), Tonic water and Lemon slice</p>
+              <p>Gin, Vodka, Rum (Bacardi), Tonic water and Lemon slice</p>
             </div>
           </div>
         </div>
@@ -122,7 +128,7 @@
             <div class="info-wrapper text-center">
               <h2>Gentle Blue <span class="type gin"></span></h2>
               <small>Let the clouds carry you as you dream blue.</small>
-              <p>Contains: Gin, Blue curacao, Tonic water and a Lemon slice</p>
+              <p>Gin, Blue curacao, Tonic water and a Lemon slice</p>
             </div>
           </div>
         </div>
@@ -139,7 +145,7 @@
                 sip slowly at the end of a long day, as one would imagine the image of Don Corleone at
                 his
                 desk while considering favors on his daughter’s wedding day.</small>
-              <p>Contains: Whiskey (Scotch) and Amaretto</p>
+              <p>Whiskey (Scotch) and Amaretto</p>
             </div>
           </div>
         </div>
@@ -154,7 +160,7 @@
               <small>The semi-sweet sister to the Godfather packs a surprising punch. Never underestimate
                 the
                 sweeter sex.</small>
-              <p>Contains: Vodka and Amaretto</p>
+              <p>Vodka and Amaretto</p>
             </div>
           </div>
         </div>
@@ -167,7 +173,7 @@
             <div class="info-wrapper text-center">
               <h2>Moscow Mule <span class="type vodka"></span> / <span class="type rum"></span></h2>
               <small>Half donkey, half horse, 100% Russian (Use a russian accent) </small>
-              <p>Contains: Vodka or Rum, Lime juice and Ginger beer</p>
+              <p>Vodka or Rum, Lime juice and Ginger beer</p>
             </div>
           </div>
         </div>
@@ -180,7 +186,7 @@
             <div class="info-wrapper text-center">
               <h2>New York Sour <span class="type whiskey"></span></h2>
               <small>Feel the bitterness of a long day at work on wall street.</small>
-              <p>Contains: Rye or Bourbon whiskey, Lemon juice, Simple syrup and Red wine (fruity)</p>
+              <p>Rye or Bourbon whiskey, Lemon juice, Simple syrup and Red wine (fruity)</p>
             </div>
           </div>
         </div>
@@ -195,7 +201,7 @@
               <small>Truly a timeless drink that has been evolved and perfected for centuries. One of the
                 best
                 ways to dress up your favourite whiskey.</small>
-              <p>Contains: Sugar cube, Angostura bitters, Rye of Bourbon whiskey, an Orange slice or an
+              <p>Sugar cube, Angostura bitters, Rye of Bourbon whiskey, an Orange slice or an
                 Orange
                 peel and a Maraschino cherry</p>
             </div>
@@ -219,7 +225,7 @@
                 quite so gay. If you're into the Dark Knight, You probably like Michael Caine. If you're
                 not
                 into Batman, You probably have half a brain.”</small>
-              <p>Contains: Rum (light), Pineapple juice, Cream of coconut and a Pineapple wedge or
+              <p>Rum (light), Pineapple juice, Cream of coconut and a Pineapple wedge or
                 Maraschino
                 cherry</p>
             </div>
@@ -234,7 +240,7 @@
             <div class="info-wrapper text-center">
               <h2>Soylent Green <span class="type gin"></span></h2>
               <small>No soy was hurt in the making of this drink.</small>
-              <p>Contains: Gin, Blue curacao, Orange juice and Ice</p>
+              <p>Gin, Blue curacao, Orange juice and Ice</p>
             </div>
           </div>
         </div>
@@ -249,16 +255,23 @@
                 /
                 <span class="type gin"></span></h2>
               <small>Because real women drink sour.</small>
-              <p>Contains: Whiskey or Rum or Gin, Lemon juice, Simple syrup and a Cherry of Lemon peel</p>
+              <p>Whiskey or Rum or Gin, Lemon juice, Simple syrup and a Cherry of Lemon peel</p>
             </div>
           </div>
+        </div>
+
+        <div class="disclaimer p-3 mb-3" data-aos="fade-up">
+          <p>Disclaimer: Images are not representative of final product. Ingredients are subject to stock availability.
+            Past performance is not indicative of future results. If you feel unwell, consult the doctor in the room. If
+            you break it, you buy it. If you smell smoke, Matthias is probably burning something. You get a double shot
+            only if you say the magic word. No refunds policy.</p>
         </div>
       </div>
       <div class="col-12 col-lg-2">
         <div class="side position-sticky d-none d-lg-block">
-          <h4>Upcoming Events</h4>
+          <h5>Upcoming Events</h5>
 
-          <ul>
+          <ul class="mt-3">
             <li>
               <a href="https://www.facebook.com/events/1298708736973856/" target="_blank">Escape Room</a>
             </li>
@@ -288,24 +301,9 @@
       easing: 'ease-in-out',
       once: false
     });
-
-    $('.legend li').on('click', function () {
-      let el = $(this);
-      let type = el.data('type');
-
-      if (el.hasClass('off')) {
-        el.removeClass('off');
-        $('[data-' + type + ']').fadeIn('fast', function () {
-          AOS.refresh();
-        });
-      } else {
-        el.addClass('off');
-        $('[data-' + type + ']').fadeOut('fast', function () {
-          AOS.refresh();
-        });
-      }
-    });
   </script>
+
+  <script src="assets/js/site.js"></script>
 
   <script>
     if ('serviceWorker' in navigator) {
@@ -316,16 +314,11 @@
     }
   </script>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-messaging.js"></script>
 
   <script>
-    // Your web app's Firebase configuration
     var firebaseConfig = {
       apiKey: "AIzaSyB3xuRPLCjDwIjKmwkG9xbJQ85jgu0lz2c",
       authDomain: "cocktail-night-2019.firebaseapp.com",
@@ -336,7 +329,7 @@
       appId: "1:1068577977239:web:5fad95643ec8f5077f8ad2",
       measurementId: "G-05FKV7XS73"
     };
-    // Initialize Firebase
+
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 
@@ -348,15 +341,13 @@
         return messaging.getToken();
       })
       .then(function (token) {
-        console.log(token);
+        //console.log(token);
       })
       .catch(function (err) {
         console.log('Unable to get permission to notify.', err);
       })
 
     messaging.onMessage(function (payload) {
-      console.log('onMessage: ', payload);
-
       const title = payload.notification.title;
       const options = {
         body: payload.notification.body,
@@ -364,10 +355,24 @@
       };
 
       var notification = new Notification(title, options);
-      if (Notification.permission === "granted") {
-        var notification = new Notification(title, options);
-      }
     });
+  </script>
+
+  <script>
+    let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    let isNotified = sessionStorage.getItem('notified');
+
+    if (!isMobile && isNotified == null) {
+      sessionStorage.setItem('notified', true);
+
+      const title = 'Open this on page your phone!';
+      const options = {
+        body: 'Click Add Cocktail Night to Home screen, and enable notifications',
+        image: 'https://cocktail-night-2019.firebaseapp.com/assets/icons/icon-512x512.png'
+      };
+
+      var notification = new Notification(title, options);
+    }
   </script>
 </body>
 
