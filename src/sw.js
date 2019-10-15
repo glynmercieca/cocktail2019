@@ -6,24 +6,44 @@ var filesToCache = [
   '/assets/js/site.css'
 ];
 
-self.addEventListener('install', function (e) {
-  console.log('[ServiceWorker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then(function (cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
-    })
-  );
+self.addEventListener('install', function (evt) {
+  console.log('The service worker is being installed.');
+  evt.waitUntil(caches.open(CACHE).then(function (cache) {
+    cache.addAll(filesToCache);
+  }));
 });
 
-self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
+self.addEventListener('fetch', function (evt) {
+  console.log('The service worker is serving the asset.');
+  evt.respondWith(fromCache(evt.request));
+  evt.waitUntil(update(evt.request).then(refresh));
 });
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request, { ignoreSearch: true }).then(response => {
-      return response || fetch(event.request);
-    })
-  );
-});
+function fromCache(request) {
+  return caches.open(CACHE).then(function (cache) {
+    return cache.match(request);
+  });
+}
+
+function update(request) {
+  return caches.open(CACHE).then(function (cache) {
+    return fetch(request).then(function (response) {
+      return cache.put(request, response.clone()).then(function () {
+        return response;
+      });
+    });
+  });
+}
+
+function refresh(response) {
+  return self.clients.matchAll().then(function (clients) {
+    clients.forEach(function (client) {
+      var message = {
+        type: 'refresh',
+        url: response.url,
+        eTag: response.headers.get('ETag')
+      };
+      client.postMessage(JSON.stringify(message));
+    });
+  });
+}
